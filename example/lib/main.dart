@@ -1,9 +1,6 @@
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:polls/polls.dart';
-
-
 
 void main() => runApp(MyApp());
 
@@ -14,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Polls',
       theme: ThemeData(
+        brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
       home: PollView(),
@@ -21,14 +19,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class PollView extends StatefulWidget {
   @override
   _PollViewState createState() => _PollViewState();
 }
 
 class _PollViewState extends State<PollView> {
-
   double option1 = 1.0;
   double option2 = 0.0;
   double option3 = 1.0;
@@ -39,7 +35,12 @@ class _PollViewState extends State<PollView> {
   double option8 = 1.0;
 
   String user = "king@mail.com";
-  Map usersWhoVoted = {'sam@mail.com': 3, 'mike@mail.com' : 4, 'john@mail.com' : 1, 'kenny@mail.com' : 1};
+  Map usersWhoVoted = {
+    'sam@mail.com': 3,
+    'mike@mail.com': 4,
+    'john@mail.com': 1,
+    'kenny@mail.com': 1
+  };
   String creator = "eddy@mail.com";
 
   @override
@@ -47,9 +48,15 @@ class _PollViewState extends State<PollView> {
     return Scaffold(
       body: Container(
         child: Polls(
+          onVoteProgressColor: Colors.black,
+          darktheme: true,
+          outlineColor: Colors.white,
           children: [
             // This cannot be less than 2, else will throw an exception
-            Polls.options(title: 'Cairo', value: option1),
+            Polls.options(
+              title: 'Cairo',
+              value: option1,
+            ),
             Polls.options(title: 'Mecca', value: option2),
             Polls.options(title: 'Denmark', value: option3),
             Polls.options(title: 'Mogadishu', value: option4),
@@ -64,8 +71,8 @@ class _PollViewState extends State<PollView> {
           voteData: usersWhoVoted,
           userChoice: usersWhoVoted[this.user],
           onVoteBackgroundColor: Colors.blue,
-          leadingBackgroundColor: Colors.blue,
-          backgroundColor: Colors.white,
+          leadingBackgroundColor: Colors.red,
+          backgroundColor: Colors.black,
           onVote: (choice) {
             print(choice);
             setState(() {

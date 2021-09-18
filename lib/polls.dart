@@ -11,6 +11,7 @@ late int userPollChoice;
 
 class Polls extends StatefulWidget {
   /// this takes the question on the poll
+  final bool darktheme;
   final Text question;
 
   ///this determines what type of view user should see
@@ -56,24 +57,27 @@ class Polls extends StatefulWidget {
   final Color? onVoteBackgroundColor;
   final Color? iconColor;
   final Color? leadingBackgroundColor;
+  final Color? onVoteProgressColor;
 
   /// Polls contruct by default get view for voting
   Polls({
+    required this.onVoteProgressColor,
+    required this.darktheme,
     required this.children,
     required this.question,
     required this.voteData,
     required this.currentUser,
     required this.creatorID,
+    required this.outlineColor,
+    required this.leadingBackgroundColor,
+    required this.backgroundColor,
+    required this.onVoteBackgroundColor,
     this.userChoice,
     this.allowCreatorVote = false,
     this.onVote,
-    this.outlineColor = Colors.grey,
-    this.backgroundColor = Colors.blueGrey,
-    this.onVoteBackgroundColor = Colors.blue,
     this.leadingPollStyle,
     this.pollStyle,
     this.iconColor = Colors.black,
-    this.leadingBackgroundColor = Colors.blueGrey,
   })  : highest = null,
         getHighest = null,
         getTotal = null,
@@ -94,16 +98,18 @@ class Polls extends StatefulWidget {
     }
   }
 
-  /// this creates view for see polls result
+  //  this creates view for see polls result
   Polls.viewPolls(
       {required this.children,
+      required this.darktheme,
+      required this.onVoteProgressColor,
       required this.question,
+      required this.leadingBackgroundColor,
+      required this.backgroundColor,
+      required this.onVoteBackgroundColor,
       this.userChoice,
       this.leadingPollStyle,
       this.pollStyle,
-      this.backgroundColor = Colors.blue,
-      this.leadingBackgroundColor = Colors.blueAccent,
-      this.onVoteBackgroundColor = Colors.blueGrey,
       this.iconColor = Colors.black})
       : allowCreatorVote = false,
         getTotal = null,
@@ -121,12 +127,14 @@ class Polls extends StatefulWidget {
   /// This creates view for the creator of the polls
   Polls.creator(
       {required this.children,
+      required this.darktheme,
       required this.question,
       this.leadingPollStyle,
+      required this.onVoteProgressColor,
       this.pollStyle,
-      this.backgroundColor = Colors.blue,
-      this.leadingBackgroundColor = Colors.blueAccent,
-      this.onVoteBackgroundColor = Colors.blueGrey,
+      required this.leadingBackgroundColor,
+      required this.backgroundColor,
+      required this.onVoteBackgroundColor,
       this.allowCreatorVote = false})
       : viewType = PollsType.creator,
         onVote = null,
@@ -145,11 +153,13 @@ class Polls extends StatefulWidget {
   /// this creates view for users to cast votes
   Polls.castVote({
     required this.children,
+    required this.darktheme,
+    required this.onVoteProgressColor,
     required this.question,
     required this.onVote,
     this.allowCreatorVote = false,
-    this.outlineColor = Colors.grey,
-    this.backgroundColor = Colors.blueGrey,
+    required this.outlineColor,
+    required this.backgroundColor,
     this.pollStyle,
   })  : viewType = PollsType.voter,
         userChoice = null,
@@ -705,11 +715,15 @@ class _PollsState extends State<Polls> {
           height: 12,
         ),
         Container(
+          height: 50,
+          // color: Colors.purple,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
           child: LinearPercentIndicator(
+              // fillColor: Colors.purple,
+              // backgroundColor: Colors.purple,
               animation: true,
-              lineHeight: 38.0,
+              lineHeight: 50,
               animationDuration: 500,
               percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                   this.v5, this.v6, this.v7, this.v8, 1)[0],
@@ -744,13 +758,14 @@ class _PollsState extends State<Polls> {
                   : widget.onVoteBackgroundColor),
         ),
         Container(
+          height: 50,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
           child: LinearPercentIndicator(
 //              width: MediaQuery.of(context).size.width,
 
               animation: true,
-              lineHeight: 38.0,
+              lineHeight: 50,
               animationDuration: 500,
               percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                   this.v5, this.v6, this.v7, this.v8, 2)[0],
@@ -786,13 +801,14 @@ class _PollsState extends State<Polls> {
         ),
         this.c3 != null
             ? Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
 //              width: MediaQuery.of(context).size.width,
 
                     animation: true,
-                    lineHeight: 38.0,
+                    lineHeight: 50,
                     animationDuration: 500,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 3)[0],
@@ -837,11 +853,12 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c4 != null
             ? Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
                     animation: true,
-                    lineHeight: 38.0,
+                    lineHeight: 50,
                     animationDuration: 500,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 4)[0],
@@ -886,11 +903,12 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c5 != null
             ? Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
                     animation: true,
-                    lineHeight: 38.0,
+                    lineHeight: 50,
                     animationDuration: 500,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 5)[0],
@@ -935,11 +953,12 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c6 != null
             ? Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
                     animation: true,
-                    lineHeight: 38.0,
+                    lineHeight: 50,
                     animationDuration: 500,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 6)[0],
@@ -984,11 +1003,12 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c7 != null
             ? Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
                     animation: true,
-                    lineHeight: 38.0,
+                    lineHeight: 50,
                     animationDuration: 500,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 7)[0],
@@ -1033,11 +1053,12 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c8 != null
             ? Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
                     animation: true,
-                    lineHeight: 38.0,
+                    lineHeight: 50,
                     animationDuration: 500,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 8)[0],
@@ -1124,11 +1145,13 @@ class _PollsState extends State<Polls> {
           height: 12,
         ),
         Container(
+          height: 50,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
           child: LinearPercentIndicator(
+            backgroundColor: widget.onVoteProgressColor,
             animation: true,
-            lineHeight: 38.0,
+            lineHeight: 50,
             animationDuration: 500,
             percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                 this.v5, this.v6, this.v7, this.v8, 1)[0],
@@ -1165,12 +1188,14 @@ class _PollsState extends State<Polls> {
           ),
         ),
         Container(
+          height: 50,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
           child: LinearPercentIndicator(
+            backgroundColor: widget.onVoteProgressColor,
 //              width: MediaQuery.of(context).size.width,
             animation: true,
-            lineHeight: 38.0,
+            lineHeight: 50,
             animationDuration: 500,
             percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                 this.v5, this.v6, this.v7, this.v8, 2)[0],
@@ -1209,12 +1234,14 @@ class _PollsState extends State<Polls> {
         this.c3 == null
             ? Offstage()
             : Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
+                  backgroundColor: widget.onVoteProgressColor,
 //              width: MediaQuery.of(context).size.width,
                   animation: true,
-                  lineHeight: 38.0,
+                  lineHeight: 50,
                   animationDuration: 500,
                   percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                       this.v5, this.v6, this.v7, this.v8, 3)[0],
@@ -1261,12 +1288,14 @@ class _PollsState extends State<Polls> {
         this.c4 == null
             ? Offstage()
             : Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
+                  backgroundColor: widget.onVoteProgressColor,
 //              width: MediaQuery.of(context).size.width,
                   animation: true,
-                  lineHeight: 38.0,
+                  lineHeight: 50,
                   animationDuration: 500,
                   percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                       this.v5, this.v6, this.v7, this.v8, 4)[0],
@@ -1313,12 +1342,14 @@ class _PollsState extends State<Polls> {
         this.c5 == null
             ? Offstage()
             : Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
+                  backgroundColor: widget.onVoteProgressColor,
 //              width: MediaQuery.of(context).size.width,
                   animation: true,
-                  lineHeight: 38.0,
+                  lineHeight: 50,
                   animationDuration: 500,
                   percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                       this.v5, this.v6, this.v7, this.v8, 5)[0],
@@ -1365,12 +1396,14 @@ class _PollsState extends State<Polls> {
         this.c6 == null
             ? Offstage()
             : Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
+                  backgroundColor: widget.onVoteProgressColor,
 //              width: MediaQuery.of(context).size.width,
                   animation: true,
-                  lineHeight: 38.0,
+                  lineHeight: 50,
                   animationDuration: 500,
                   percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                       this.v5, this.v6, this.v7, this.v8, 6)[0],
@@ -1417,12 +1450,14 @@ class _PollsState extends State<Polls> {
         this.c7 == null
             ? Offstage()
             : Container(
+                height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
+                  backgroundColor: widget.onVoteProgressColor,
 //              width: MediaQuery.of(context).size.width,
                   animation: true,
-                  lineHeight: 38.0,
+                  lineHeight: 50,
                   animationDuration: 500,
                   percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                       this.v5, this.v6, this.v7, this.v8, 7)[0],
@@ -1469,12 +1504,15 @@ class _PollsState extends State<Polls> {
         this.c8 == null
             ? Offstage()
             : Container(
+                // height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
                 child: LinearPercentIndicator(
+                  backgroundColor: widget.onVoteProgressColor,
+                  // fillColor: Colors.purple,
 //              width: MediaQuery.of(context).size.width,
                   animation: true,
-                  lineHeight: 38.0,
+                  lineHeight: 50,
                   animationDuration: 500,
                   percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                       this.v5, this.v6, this.v7, this.v8, 8)[0],
