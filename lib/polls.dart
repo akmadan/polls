@@ -44,7 +44,7 @@ class Polls extends StatefulWidget {
   /// this returns highest votes casted
   final PollTotal? getHighest;
 
-  @protected
+  // //@protected
   final double? highest;
 
   /// style
@@ -183,61 +183,61 @@ class Polls extends StatefulWidget {
 
 class _PollsState extends State<Polls> {
   /// c1 stands for choice 1
-  @protected
+  //@protected
   late String c1;
 
   /// c2 stands for choice 2
-  @protected
+  //@protected
   late String c2;
 
   /// c3 stands for choice 3
-  @protected
+  //@protected
   String? c3;
 
   /// c4 stands for choice 4
-  @protected
+  //@protected
   String? c4;
 
   /// c3 stands for choice 5
-  @protected
+  //@protected
   String? c5;
 
   /// c4 stands for choice 6
-  @protected
+  //@protected
   String? c6;
 
   /// c3 stands for choice 7
-  @protected
+  //@protected
   String? c7;
 
   /// c4 stands for choice 8
-  @protected
+  //@protected
   String? c8;
 
   /// v1 stands for value 1
-  @protected
+  //@protected
   late double v1;
 
   /// v2 stands for value 2
-  @protected
+  //@protected
   late double v2;
 
-  @protected
+  //@protected
   double? v3;
 
-  @protected
+  //@protected
   double? v4;
 
-  @protected
+  //@protected
   double? v5;
 
-  @protected
+  //@protected
   double? v6;
 
-  @protected
+  //@protected
   double? v7;
 
-  @protected
+  //@protected
   double? v8;
 
   /// user choices
@@ -715,11 +715,13 @@ class _PollsState extends State<Polls> {
           height: 12,
         ),
         Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
           height: 50,
           // color: Colors.purple,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
           child: LinearPercentIndicator(
+
               // fillColor: Colors.purple,
               // backgroundColor: Colors.purple,
               animation: true,
@@ -752,13 +754,14 @@ class _PollsState extends State<Polls> {
                           : widget.pollStyle)
                 ],
               ),
-              linearStrokeCap: LinearStrokeCap.roundAll,
+              //linearStrokeCap: //linearStrokeCap.roundAll,
               progressColor: this.highest == this.v1
                   ? widget.leadingBackgroundColor
                   : widget.onVoteBackgroundColor),
         ),
         Container(
           height: 50,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
           child: LinearPercentIndicator(
@@ -794,13 +797,15 @@ class _PollsState extends State<Polls> {
                           : widget.pollStyle)
                 ],
               ),
-              linearStrokeCap: LinearStrokeCap.roundAll,
+              //linearStrokeCap: //linearStrokeCap.roundAll,
               progressColor: this.highest == this.v2
                   ? widget.leadingBackgroundColor
                   : widget.onVoteBackgroundColor),
         ),
         this.c3 != null
             ? Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -845,7 +850,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    //linearStrokeCap: //linearStrokeCap.roundAll,
                     progressColor: this.highest == this.v3
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -853,6 +858,8 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c4 != null
             ? Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -895,7 +902,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    //linearStrokeCap: //linearStrokeCap.roundAll,
                     progressColor: this.highest == this.v4
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -903,6 +910,8 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c5 != null
             ? Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -945,7 +954,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    //linearStrokeCap: //linearStrokeCap.roundAll,
                     progressColor: this.highest == this.v5
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -953,6 +962,8 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c6 != null
             ? Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -995,7 +1006,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    //linearStrokeCap: //linearStrokeCap.roundAll,
                     progressColor: this.highest == this.v6
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1003,6 +1014,8 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c7 != null
             ? Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1045,7 +1058,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    //linearStrokeCap: //linearStrokeCap.roundAll,
                     progressColor: this.highest == this.v7
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1053,6 +1066,8 @@ class _PollsState extends State<Polls> {
             : Offstage(),
         this.c8 != null
             ? Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1095,7 +1110,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    // //linearStrokeCap: //linearStrokeCap.roundAll,
                     progressColor: this.highest == this.v8
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1145,6 +1160,7 @@ class _PollsState extends State<Polls> {
           height: 12,
         ),
         Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
           height: 50,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
@@ -1181,13 +1197,15 @@ class _PollsState extends State<Polls> {
                         : widget.pollStyle)
               ],
             ),
-            linearStrokeCap: LinearStrokeCap.roundAll,
+            //linearStrokeCap: //linearStrokeCap.roundAll,
             progressColor: this.highest == this.v1
                 ? widget.leadingBackgroundColor
                 : widget.onVoteBackgroundColor,
           ),
         ),
         Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5), color: Colors.orange),
           height: 50,
           margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
           width: double.infinity,
@@ -1225,7 +1243,7 @@ class _PollsState extends State<Polls> {
                         : widget.pollStyle)
               ],
             ),
-            linearStrokeCap: LinearStrokeCap.roundAll,
+            //linearStrokeCap: //linearStrokeCap.roundAll,
             progressColor: this.highest == this.v2
                 ? widget.leadingBackgroundColor
                 : widget.onVoteBackgroundColor,
@@ -1234,6 +1252,8 @@ class _PollsState extends State<Polls> {
         this.c3 == null
             ? Offstage()
             : Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1279,7 +1299,7 @@ class _PollsState extends State<Polls> {
                               : widget.pollStyle)
                     ],
                   ),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  //linearStrokeCap: //linearStrokeCap.roundAll,
                   progressColor: this.highest == this.v3
                       ? widget.leadingBackgroundColor
                       : widget.onVoteBackgroundColor,
@@ -1288,6 +1308,8 @@ class _PollsState extends State<Polls> {
         this.c4 == null
             ? Offstage()
             : Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1333,7 +1355,7 @@ class _PollsState extends State<Polls> {
                               : widget.pollStyle)
                     ],
                   ),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  //linearStrokeCap: //linearStrokeCap.roundAll,
                   progressColor: this.highest == this.v4
                       ? widget.leadingBackgroundColor
                       : widget.onVoteBackgroundColor,
@@ -1342,6 +1364,8 @@ class _PollsState extends State<Polls> {
         this.c5 == null
             ? Offstage()
             : Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1387,7 +1411,7 @@ class _PollsState extends State<Polls> {
                               : widget.pollStyle)
                     ],
                   ),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  //linearStrokeCap: //linearStrokeCap.roundAll,
                   progressColor: this.highest == this.v5
                       ? widget.leadingBackgroundColor
                       : widget.onVoteBackgroundColor,
@@ -1396,6 +1420,8 @@ class _PollsState extends State<Polls> {
         this.c6 == null
             ? Offstage()
             : Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1441,7 +1467,7 @@ class _PollsState extends State<Polls> {
                               : widget.pollStyle)
                     ],
                   ),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  //linearStrokeCap: //linearStrokeCap.roundAll,
                   progressColor: this.highest == this.v6
                       ? widget.leadingBackgroundColor
                       : widget.onVoteBackgroundColor,
@@ -1450,6 +1476,8 @@ class _PollsState extends State<Polls> {
         this.c7 == null
             ? Offstage()
             : Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1495,7 +1523,7 @@ class _PollsState extends State<Polls> {
                               : widget.pollStyle)
                     ],
                   ),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  //linearStrokeCap: //linearStrokeCap.roundAll,
                   progressColor: this.highest == this.v7
                       ? widget.leadingBackgroundColor
                       : widget.onVoteBackgroundColor,
@@ -1504,6 +1532,8 @@ class _PollsState extends State<Polls> {
         this.c8 == null
             ? Offstage()
             : Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5)),
                 // height: 50,
                 margin: EdgeInsets.fromLTRB(3, 3, 10, 3),
                 width: double.infinity,
@@ -1550,7 +1580,7 @@ class _PollsState extends State<Polls> {
                               : widget.pollStyle)
                     ],
                   ),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
+                  //linearStrokeCap: //linearStrokeCap.roundAll,
                   progressColor: this.highest == this.v8
                       ? widget.leadingBackgroundColor
                       : widget.onVoteBackgroundColor,
