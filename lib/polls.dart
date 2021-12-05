@@ -724,7 +724,7 @@ class _PollsState extends State<Polls> {
           child: LinearPercentIndicator(
               animation: true,
               lineHeight: 50,
-              animationDuration: 100,
+              animationDuration: 0,
               percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                   this.v5, this.v6, this.v7, this.v8, 1)[0],
               center: Row(
@@ -767,7 +767,7 @@ class _PollsState extends State<Polls> {
 
               animation: true,
               lineHeight: 50,
-              animationDuration: 100,
+              animationDuration: 0,
               percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                   this.v5, this.v6, this.v7, this.v8, 2)[0],
               center: Row(
@@ -812,7 +812,7 @@ class _PollsState extends State<Polls> {
 
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 3)[0],
                     center: Row(
@@ -864,7 +864,7 @@ class _PollsState extends State<Polls> {
                 child: LinearPercentIndicator(
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 4)[0],
                     center: Row(
@@ -916,7 +916,7 @@ class _PollsState extends State<Polls> {
                 child: LinearPercentIndicator(
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 5)[0],
                     center: Row(
@@ -968,7 +968,7 @@ class _PollsState extends State<Polls> {
                 child: LinearPercentIndicator(
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 6)[0],
                     center: Row(
@@ -1020,7 +1020,7 @@ class _PollsState extends State<Polls> {
                 child: LinearPercentIndicator(
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 7)[0],
                     center: Row(
@@ -1072,7 +1072,7 @@ class _PollsState extends State<Polls> {
                 child: LinearPercentIndicator(
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 8)[0],
                     center: Row(
@@ -1168,7 +1168,7 @@ class _PollsState extends State<Polls> {
               backgroundColor: widget.onVoteProgressColor,
               animation: true,
               lineHeight: 50,
-              animationDuration: 100,
+              animationDuration: 0,
               percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                   this.v5, this.v6, this.v7, this.v8, 1)[0],
               center: Row(
@@ -1216,7 +1216,7 @@ class _PollsState extends State<Polls> {
               // width: MediaQuery.of(context).size.width,
               animation: true,
               lineHeight: 50,
-              animationDuration: 100,
+              animationDuration: 0,
               percent: PollMath.getPerc(this.v1, this.v2, this.v3, this.v4,
                   this.v5, this.v6, this.v7, this.v8, 2)[0],
               center: Row(
@@ -1267,7 +1267,7 @@ class _PollsState extends State<Polls> {
                     //              width: MediaQuery.of(context).size.width,
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 3)[0],
                     center: Row(
@@ -1326,7 +1326,7 @@ class _PollsState extends State<Polls> {
                     //              width: MediaQuery.of(context).size.width,
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 4)[0],
                     center: Row(
@@ -1385,7 +1385,7 @@ class _PollsState extends State<Polls> {
                     //              width: MediaQuery.of(context).size.width,
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 5)[0],
                     center: Row(
@@ -1444,7 +1444,7 @@ class _PollsState extends State<Polls> {
                     //              width: MediaQuery.of(context).size.width,
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 6)[0],
                     center: Row(
@@ -1503,7 +1503,7 @@ class _PollsState extends State<Polls> {
                     //              width: MediaQuery.of(context).size.width,
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 7)[0],
                     center: Container(
@@ -1566,7 +1566,7 @@ class _PollsState extends State<Polls> {
                     //              width: MediaQuery.of(context).size.width,
                     animation: true,
                     lineHeight: 50,
-                    animationDuration: 100,
+                    animationDuration: 0,
                     percent: PollMath.getPerc(this.v1, this.v2, this.v3,
                         this.v4, this.v5, this.v6, this.v7, this.v8, 8)[0],
                     center: Row(
