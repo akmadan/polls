@@ -752,7 +752,7 @@ class _PollsState extends State<Polls> {
                           : widget.pollStyle)
                 ],
               ),
-              linearStrokeCap: LinearStrokeCap.round,
+              linearStrokeCap: LinearStrokeCap.butt,
               progressColor: this.highest == this.v1
                   ? widget.leadingBackgroundColor
                   : widget.onVoteBackgroundColor),
@@ -795,7 +795,7 @@ class _PollsState extends State<Polls> {
                           : widget.pollStyle)
                 ],
               ),
-              linearStrokeCap: LinearStrokeCap.round,
+              linearStrokeCap: LinearStrokeCap.butt,
               progressColor: this.highest == this.v2
                   ? widget.leadingBackgroundColor
                   : widget.onVoteBackgroundColor),
@@ -848,7 +848,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.round,
+                    linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v3
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -900,7 +900,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.round,
+                    linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v4
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -952,7 +952,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.round,
+                    linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v5
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1004,7 +1004,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.round,
+                    linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v6
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1056,7 +1056,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.round,
+                    linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v7
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1108,7 +1108,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    linearStrokeCap: LinearStrokeCap.round,
+                    linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v8
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor),
@@ -1197,7 +1197,7 @@ class _PollsState extends State<Polls> {
                           : widget.pollStyle)
                 ],
               ),
-              // linearStrokeCap: LinearStrokeCap.round,
+              // linearStrokeCap: LinearStrokeCap.butt,
               progressColor: this.highest == this.v1
                   ? widget.leadingBackgroundColor
                   : widget.onVoteBackgroundColor,
@@ -1245,7 +1245,7 @@ class _PollsState extends State<Polls> {
                           : widget.pollStyle)
                 ],
               ),
-              // linearStrokeCap: LinearStrokeCap.round,
+              // linearStrokeCap: LinearStrokeCap.butt,
               progressColor: this.highest == this.v2
                   ? widget.leadingBackgroundColor
                   : widget.onVoteBackgroundColor,
@@ -1304,7 +1304,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    // linearStrokeCap: LinearStrokeCap.round,
+                    // linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v3
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor,
@@ -1363,7 +1363,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    // linearStrokeCap: LinearStrokeCap.round,
+                    // linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v4
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor,
@@ -1422,7 +1422,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    // linearStrokeCap: LinearStrokeCap.round,
+                    // linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v5
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor,
@@ -1481,7 +1481,7 @@ class _PollsState extends State<Polls> {
                                 : widget.pollStyle)
                       ],
                     ),
-                    // linearStrokeCap: LinearStrokeCap.round,
+                    // linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v6
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor,
@@ -1542,7 +1542,7 @@ class _PollsState extends State<Polls> {
                         ],
                       ),
                     ),
-                    // linearStrokeCap: LinearStrokeCap.round,
+                    // linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v7
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor,
@@ -1604,7 +1604,7 @@ class _PollsState extends State<Polls> {
                       ],
                     ),
                     // linearStrokeCap: ,
-                    // linearStrokeCap: LinearStrokeCap.round,
+                    // linearStrokeCap: LinearStrokeCap.butt,
                     progressColor: this.highest == this.v8
                         ? widget.leadingBackgroundColor
                         : widget.onVoteBackgroundColor,
