@@ -92,7 +92,8 @@ viewType: PollsType.readOnly
 
 Apparently, I have built 2 apps that required user voting processes, twice I had to implement same code on different apps.
 I also had to share the code with a friend, well I thought it would not be a bad idea to create a package off it, cause at this
-time there was no polls widget package on pub.dev
+time there was no polls widget package on pub.dev this will help each and every one in their future 
+Happy coding
 
 ### kindly follow on github
 [github](https://github.com/samuelezedi)
